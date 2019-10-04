@@ -10,6 +10,6 @@ const App = () => {
       <SavesTable />
     </div>
   );
-}
+};
 
 export default App;

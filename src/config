@@ -4,5 +4,5 @@
 	ignorecase = true
 	precomposeunicode = true
 [remote "origin"]
-	url = https://github.com/Alanh168/reddit-saves-searcher.git
+	url = https://github.com/Alanh168/reddit-saves-manager.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
