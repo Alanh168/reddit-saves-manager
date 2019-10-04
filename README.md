@@ -1,3 +1,8 @@
+# Reddit Saves Manager
+## A React App for Organizing, Searching, and Exporting Reddit Saves
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

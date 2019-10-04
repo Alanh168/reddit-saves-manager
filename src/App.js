@@ -3,7 +3,7 @@ import './App.css';
 import AppHeader from "./components/AppHeader.js"
 import SavesTable from "./components/SavesTable.js"
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <AppHeader />
