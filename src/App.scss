@@ -1,0 +1,131 @@
+// Variables
+$gravitation-constant: 6.673;
+$t: .92; // Changing this will alter the orbital speed, the lower the faster
+$animation: orbit;
+
+$planet-color: #C25447;
+$moon-color: #9E9E9E;
+
+// Orbit Function
+@function orbit() {
+  @return $animation $gravitation-constant * $t + s linear infinite;
+}
+
+.App {
+  text-align: center;
+  background-color: #282c34;
+}
+
+.App-logo {
+  height: 40vmin;
+  color: #09d3ac;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Loader {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  h2 {
+    margin-top: 80px;
+    color: $moon-color;
+  }
+
+  // Use Flexbox To Center Content
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  // Create Our Orbit
+  .orbit {
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    position: absolute;
+    border-radius: 100%;
+    margin: -50px auto;
+    animation: orbit();
+  }
+
+  // Planet Styles
+  .planet {
+    background: $planet-color;
+    box-shadow: inset -30px -30px 0px darken($planet-color, 2%);
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    &:before {
+      content: '';
+      background: darken($planet-color, 5%);
+      border-radius: 100%;
+      width: 20px;
+      height: 20px;
+      display: block;
+      margin: 50px 100px;
+    }
+    &:after {
+      content: '';
+      background: darken($planet-color, 4%);
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      display: block;
+      margin: -20px 40px;
+    }
+  }
+
+  // Moon Styles
+  .moon {
+    background: $moon-color;
+    box-shadow: inset -7px -7px 0 darken($moon-color, 7%);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 20px;
+    &:before {
+      content: '';
+      background: darken($moon-color, 4%);
+      border-radius: 100%;
+      width: 9px;
+      height: 9px;
+      display: inline-block;
+      margin: 10px 10px;
+    }
+    &:after {
+      content: '';
+      background: darken($moon-color, 4%);
+      border-radius: 100%;
+      width: 9px;
+      height: 9px;
+      display: block;
+      margin: -7px 20px;
+    }
+  }
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+// Animations
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}

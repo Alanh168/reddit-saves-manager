@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Loader from "./components/Loader.js";
-import AppHeader from "./components/AppHeader.js";
-import SavesTable from "./components/SavesTable.js";
+// import AppHeader from "./components/AppHeader.js";
+// import SavesTable from "./components/SavesTable.js";
 
 const App = () => {
   return (
