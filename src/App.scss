@@ -13,7 +13,8 @@ $moon-color: #9E9E9E;
 
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #282c34 !important;
+  min-height: 100vh;
 }
 
 .App-logo {

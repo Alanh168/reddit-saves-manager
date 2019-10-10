@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { setState } from 'react';
+import PropTypes from 'prop-types';
 import logo from '../logo.png';
 
-class Loader extends React.Component {
+class Preloader extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            loading: true
+        }
+    }
     componentDidMount () {
-        setTimeout(function() {
+        setTimeout(() => {
+            this.setState({loading: false});
             // $('.Loader').addClass('fadeaway');
-        }, 3000);
+        }, 2000);
     }
     render () {
         return(
-            <div className="Loader">
+            this.state.loading && <div className="Loader">
                 <div className="container">
                     <div className="planet"></div>
                     <div className="orbit">
@@ -22,4 +30,4 @@ class Loader extends React.Component {
     }
 }
 
-export default Loader;
+export default Preloader;

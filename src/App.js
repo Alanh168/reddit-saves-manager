@@ -1,15 +1,13 @@
 import React from 'react';
 import './App.scss';
-import Loader from "./components/Loader.js";
-// import AppHeader from "./components/AppHeader.js";
-// import SavesTable from "./components/SavesTable.js";
+import Preloader from "./components/Preloader.js";
+import SavesDisplay from "./components/SavesDisplay.js";
 
 const App = () => {
   return (
     <div className="App">
-        <Loader />
-        {/*<AppHeader />*/}
-        {/*<SavesTable />*/}
+        <Preloader />
+        <SavesDisplay />
     </div>
   );
 };

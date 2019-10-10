@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SavesTable() {
+function SavesDisplay() {
   return (
     <table>
 
@@ -8,4 +8,4 @@ function SavesTable() {
   );
 }
 
-export default SavesTable;
+export default SavesDisplay;
